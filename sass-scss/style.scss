@@ -1,0 +1,562 @@
+@import url(//db.onlinewebfonts.com/c/860c3ec7bbc5da3e97233ccecafe512e?family=Circular+Std+Book);
+@import "../assets/css/circular-font.css";
+@import "./color";
+@import "./album";
+
+$font-path: "../assets/fonts";
+
+@font-face {
+  font-family: "CircularStd";
+  src: url("#{$font-path}CircularStd.otf") format("opentype");
+}
+
+body {
+  background-color: black;
+
+  font-size: 12px;
+  color: $textColor;
+  /*  overflow-x: hidden */
+}
+
+.myBgGradient {
+  background: rgb(0, 0, 0);
+  background: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(44, 44, 44, 1) 67%);
+}
+
+.mySectionGradient {
+  background: rgb(0, 0, 0);
+  background: linear-gradient(39deg, rgba(0, 0, 0, 1) 0%, rgba(44, 44, 44, 1) 67%);
+}
+
+.asideBgColor {
+  background-color: $body-bg-color;
+}
+
+.textColor {
+  color: $textColor;
+}
+
+#leftColumn {
+  color: $textColor;
+  text-decoration: none;
+  fill: $textColor;
+  stroke: $textColor;
+
+  &:hover {
+    color: white;
+    transition: 0.5s;
+    cursor: pointer;
+    fill: white;
+    stroke: white;
+  }
+}
+
+.asideRight {
+  color: $textColor;
+}
+
+#offcanvasBtn {
+  border: none;
+  background-color: black;
+  border: 2px solid #2a2a2a;
+  color: $textColor;
+  font-size: 12px;
+  padding: 5px  20px;
+  border-radius: 18px;
+  margin-inline: 5px;
+
+  &:hover {
+    background-color: #343434;
+    color: white;
+  }
+}
+
+
+
+#containerList {
+  overflow-y: scroll;
+  max-height: calc(100vh - 365px);
+}
+
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: black;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: $textColor;
+}
+
+#centralContainer {
+  overflow-y: scroll;
+  height: 97vh;
+}
+
+// audio control
+
+* {
+  box-sizing: border-box;
+  font-family: "circular std book", sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #222;
+  font-size: 14px;
+}
+
+.music-player {
+  --primary-color: #ddd;
+  --secondary-color: #999;
+  --green-color: #2d5;
+  --padding: 1em;
+  background-color: #111;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+
+  height: 7rem;
+  padding: var(--padding);
+  color: var(--primary-color);
+}
+i {
+  color: var(--secondary-color);
+}
+i:hover {
+  color: var(--primary-color);
+}
+.song-bar {
+  position: absolute;
+  left: var(--padding);
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1.5rem;
+  width: 25%;
+}
+
+.song-infos {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+}
+.image-container {
+  --size: 4.5em;
+  flex-shrink: 0;
+  width: var(--size);
+  height: var(--size);
+}
+.image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.song-description p {
+  margin: 0.2em;
+}
+.title,
+.artist {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  overflow: hidden;
+}
+.title:hover,
+.artist:hover {
+  text-decoration: underline;
+}
+.artist {
+  color: var(--secondary-color);
+}
+.icons {
+  display: flex;
+  gap: 1em;
+}
+.progress-controller {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5em;
+  color: var(--secondary-color);
+}
+.control-buttons {
+  display: flex;
+  align-items: center;
+  gap: 2em;
+}
+.play-pause {
+  display: inline-block;
+  padding: 1em;
+  background-color: var(--primary-color);
+  color: #111;
+  border-radius: 50%;
+}
+.play-pause:hover {
+  transform: scale(1.1);
+  color: #111;
+}
+.progress-container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1em;
+}
+.progress-bar {
+  height: 4px;
+  border-radius: 10px;
+  width: 30%;
+  background-color: #ccc4;
+}
+.progress {
+  position: relative;
+  height: 100%;
+  width: 0; /*Da tenere d'occhio */
+  border-radius: 10px;
+  background-color: var(--secondary-color);
+}
+.progress-bar:hover .progress {
+  background-color: var(--green-color);
+}
+.progress-bar:hover .progress::after {
+  content: "";
+  position: absolute;
+  --size: 1em;
+  width: var(--size);
+  height: var(--size);
+  right: 0;
+  border-radius: 50%;
+  background-color: var(--primary-color);
+  transform: translate(50%, calc(2px - 50%));
+}
+.other-features {
+  position: absolute;
+  right: var(--padding);
+  display: flex;
+  flex-direction: row;
+  gap: 1em;
+}
+.volume-bar {
+  display: flex;
+  align-items: center;
+  gap: 0.7em;
+}
+.volume-bar .progress-bar {
+  width: 6em;
+}
+.volume-bar .progress-bar:hover .progress::after {
+  --size: 0.8em;
+  content: "";
+}
+
+.volume-bar .progress {
+  transition: width 0.2s ease;
+}
+/* ARTIST PAGE  */
+
+#centralSection {
+  overflow-y: auto;
+  height: 100vh;
+  overflow-x: hidden;
+}
+
+#artistHeader {
+  height: 40%;
+  overflow: hidden;
+}
+
+.artistImgContainer {
+  height: 40%;
+  overflow: hidden;
+}
+
+#artistHeader img {
+  width: 100%;
+  object-fit: cover;
+  opacity: 0.5;
+  position: fixed;
+  z-index: -1;
+}
+
+/* #artistHeader img {
+  width: 100%;
+  object-fit: cover;
+  opacity: 0.5;
+  position: absolute;
+  z-index: -1;
+  top: -200px;
+} */
+
+.artistInfo {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  bottom: 10px;
+  left: 30px;
+}
+
+#artistTitle {
+  font-size: 3.5rem;
+  font-weight: 900;
+  line-height: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+@media screen and (max-width: 992px) {
+  #artistTitle {
+    font-size: 3rem;
+    font-weight: 900;
+    line-height: 2.5rem;
+  }
+}
+
+.subtitles {
+  font-family: "Circular";
+  font-size: 0.9rem;
+  vertical-align: middle;
+  color: white;
+}
+
+#artistContent {
+  color: $textColor;
+}
+
+.followingBtn {
+  border: 1px solid white;
+  background-color: transparent;
+  color: white;
+  border-radius: 5px;
+  font-family: "Circular";
+  font-size: 0.6rem;
+  padding: 5px 10px;
+
+  &:hover {
+    background-color: black;
+    transition: 0.5s;
+  }
+}
+
+.albumImg img {
+  max-width: 40px;
+  border-radius: 5px;
+}
+
+.popularSongs {
+  font-size: 12px;
+  color: $textColor;
+  &:hover {
+    color: white;
+    background-color: #232323;
+    border-radius: 5px;
+  }
+
+  & a {
+    text-decoration: none;
+    color: white;
+  }
+
+  & a:hover {
+    text-decoration: underline;
+    color: white;
+  }
+}
+
+.heartIcon {
+  opacity: 0;
+}
+
+.popularSongs:hover .heartIcon {
+  opacity: 1;
+}
+
+.popularSongs:hover .songNum {
+  display: none;
+}
+.songPlay {
+  display: none;
+}
+.popularSongs:hover .songPlay {
+  display: block;
+}
+
+.likedSongs {
+  font-size: 12px;
+}
+
+.myBgGradient2 {
+  background: rgb(0, 0, 0);
+  background: linear-gradient(4deg, rgba(0, 0, 0, 1) 50%, rgba(8, 37, 79, 1) 100%);
+}
+
+.showMore a {
+  text-decoration: none;
+  font-size: 13px;
+  font-family: "Circular";
+  color: $textColor;
+
+  &:hover {
+    color: white;
+  }
+}
+
+.discBtn {
+  border: none;
+  background-color: #2a2a2a;
+  color: white;
+  font-size: 12px;
+  padding: 5px 10px;
+  border-radius: 15px;
+  margin-right: 5px;
+
+  &:hover {
+    background-color: #343434;
+  }
+
+  &.firstDiscBtn {
+    background-color: #ffffff;
+    color: #2a2a2a;
+  }
+}
+
+#containerDisco a {
+  text-decoration: none;
+  color: $textColor;
+
+  &:hover {
+    color: $textColor;
+  }
+}
+
+.discCards {
+  padding: 10px;
+  border-radius: 15px;
+  &:hover {
+    background-color: #1a1a1a;
+  }
+}
+
+.discCovers {
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 2px 8px 25px 0px rgba(0, 0, 0, 0.5);
+  position: relative;
+}
+
+.playButton {
+  background-color: rgb(54, 230, 0);
+  color: black;
+  font-size: 1.5rem;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  position: absolute;
+  bottom: -3px;
+  right: 7px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 20px 30px rgba(0, 0, 0, 0.3);
+  opacity: 0;
+  transition: opacity 0.6s ease, trasform 0.8s ease;
+}
+
+.discCards:hover .playButton {
+  opacity: 1;
+  transform: translateY(-10px);
+}
+
+#containerSuggested a {
+  text-decoration: none;
+  color: $textColor;
+
+  &:hover {
+    color: $textColor;
+  }
+}
+
+.infoImgContainer {
+  overflow: hidden;
+  width: 90%;
+  padding: 0;
+  border-radius: 15px;
+  margin-inline: auto;
+}
+
+.infoImgContainer img {
+  object-fit: cover;
+  width: 100%;
+}
+
+#btn1 {
+  background-color: $btn-green;
+  width: 20%;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+#btn2 {
+  width: 20%;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+#allCardBuonasera {
+  background-color: $myGrey;
+  border-radius: 10px;
+
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.5);
+    transition: 0.5s;
+    cursor: pointer;
+    stroke: white;
+  }
+}
+
+#darker {
+  background-color: $myGrey;
+  color: $textColor;
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.5);
+    transition: 0.5s;
+    cursor: pointer;
+    stroke: white;
+  }
+}
+#altrodiciòchetipiace {
+  margin-top: 2rem;
+}
+
+#greetings {
+  margin-top: 2rem;
+}
+#buttons {
+  margin-top: 5rem;
+}
+.card-title {
+  font-weight: bold;
+  color: white;
+  font-size: 15px;
+}
+
+.card-text {
+  font-size: 14px;
+}
+#nascondi-annunci {
+  font-size: 9px;
+}
+#visualizza-tutto {
+  font-size: 11px;
+  color: $textColor;
+}
+a {
+  text-decoration: none;
+}

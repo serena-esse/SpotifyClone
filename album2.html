@@ -1,0 +1,712 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- META_TAGS -->
+    <meta charset="UTF-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta name="description" content="DESCRIZIONE" />
+
+    <!-- GOOGLE FONT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="LINK FONTS GOOGLE" rel="stylesheet" />
+
+    <!-- FONTAWESOME 5.15.4 -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/style.css" />
+
+    <!-- BOOTSTRAP -->
+
+    <!-- WEBPAGE_NAME -->
+    <title>Album Page</title>
+  </head>
+  <body>
+    <!-- BEGIN_MAIN -->
+    <main>
+      <div class="container-fluid">
+        <div class="row align-content-center">
+          <!--  START LEFT ASIDE -->
+          <div class="d-none d-md-block col-md-3 asideBgColor textColor ps-4">
+            <div class="container">
+              <a href="#" style="text-decoration: none">
+                <div class="col-12 my-3" id="leftColumn">
+                  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" width="25px">
+                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                    <g id="SVGRepo_iconCarrier">
+                      <path
+                        d="M4 9.5C5.38071 9.5 6.5 10.6193 6.5 12C6.5 13.3807 5.38071 14.5 4 14.5C2.61929 14.5 1.5 13.3807 1.5 12C1.5 10.6193 2.61929 9.5 4 9.5Z"
+                      ></path>
+                      <path
+                        d="M12 9.5C13.3807 9.5 14.5 10.6193 14.5 12C14.5 13.3807 13.3807 14.5 12 14.5C10.6193 14.5 9.5 13.3807 9.5 12C9.5 10.6193 10.6193 9.5 12 9.5Z"
+                      ></path>
+                      <path
+                        d="M22.5 12C22.5 10.6193 21.3807 9.5 20 9.5C18.6193 9.5 17.5 10.6193 17.5 12C17.5 13.3807 18.6193 14.5 20 14.5C21.3807 14.5 22.5 13.3807 22.5 12Z"
+                      ></path>
+                    </g>
+                  </svg>
+                </div>
+              </a>
+
+              <!-- HOME SEARCH LIBRARY START  -->
+              <div class="row align-content-center">
+                <a href="./index.html" style="text-decoration: none">
+                  <div class="col-12" id="leftColumn">
+                    <svg
+                      data-encore-id="icon"
+                      role="img"
+                      aria-hidden="true"
+                      class="Svg-sc-ytk21e-0 bneLcE home-icon"
+                      viewBox="0 0 24 24"
+                      width="25px"
+                    >
+                      <path
+                        d="M12.5 3.247a1 1 0 0 0-1 0L4 7.577V20h4.5v-6a1 1 0 0 1 1-1h5a1 1 0 0 1 1 1v6H20V7.577l-7.5-4.33zm-2-1.732a3 3 0 0 1 3 0l7.5 4.33a2 2 0 0 1 1 1.732V21a1 1 0 0 1-1 1h-6.5a1 1 0 0 1-1-1v-6h-3v6a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V7.577a2 2 0 0 1 1-1.732l7.5-4.33z"
+                      ></path>
+                    </svg>
+                    <span class="ps-1">Home</span>
+                  </div>
+                </a>
+
+                <div class="col-12 d-flex align-items-center overflow-hidden my-2 flex-nowrap" id="leftColumn">
+                  <form id="searchForm6">
+                    <button
+                      type="submit"
+                      style="background-color: transparent; border: none; padding: 0; padding-right: 5px"
+                    >
+                      <svg width="25px" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M10.533 1.27893C5.35215 1.27893 1.12598 5.41887 1.12598 10.5579C1.12598 15.697 5.35215 19.8369 10.533 19.8369C12.767 19.8369 14.8235 19.0671 16.4402 17.7794L20.7929 22.132C21.1834 22.5226 21.8166 22.5226 22.2071 22.132C22.5976 21.7415 22.5976 21.1083 22.2071 20.7178L17.8634 16.3741C19.1616 14.7849 19.94 12.7634 19.94 10.5579C19.94 5.41887 15.7138 1.27893 10.533 1.27893ZM3.12598 10.5579C3.12598 6.55226 6.42768 3.27893 10.533 3.27893C14.6383 3.27893 17.94 6.55226 17.94 10.5579C17.94 14.5636 14.6383 17.8369 10.533 17.8369C6.42768 17.8369 3.12598 14.5636 3.12598 10.5579Z"
+                          class="myIcon"
+                        ></path>
+                      </svg>
+                    </button>
+
+                    <input
+                      type="text"
+                      id="artistName6"
+                      name="artistName"
+                      placeholder="Search"
+                      required
+                      style="background-color: rgb(0, 0, 0); border: none; color: white; width: 60%"
+                    />
+                  </form>
+                </div>
+
+                <a href="#" style="text-decoration: none">
+                  <div class="col-12 mb-4" id="leftColumn">
+                    <svg
+                      data-encore-id="icon"
+                      role="img"
+                      aria-hidden="true"
+                      viewBox="0 0 24 24"
+                      class="Svg-sc-ytk21e-0 bneLcE"
+                      width="25px"
+                    >
+                      <path
+                        d="M3 22a1 1 0 0 1-1-1V3a1 1 0 0 1 2 0v18a1 1 0 0 1-1 1zM15.5 2.134A1 1 0 0 0 14 3v18a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V6.464a1 1 0 0 0-.5-.866l-6-3.464zM9 2a1 1 0 0 0-1 1v18a1 1 0 1 0 2 0V3a1 1 0 0 0-1-1z"
+                        class="myIcon"
+                      ></path>
+                    </svg>
+                    <span class="ps-1">Your Library</span>
+                  </div>
+                </a>
+              </div>
+              <!-- HOME SEARCH LIBRARY END -->
+
+              <!-- PLAYLIST TASTE START -->
+              <a href="#" style="text-decoration: none">
+                <div class="col-12" id="leftColumn">
+                  <svg
+                    viewBox="0 0 48.00 48.00"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="#777777"
+                    stroke="#777777"
+                    stroke-width="1.2"
+                    width="25px"
+                  >
+                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                    <g id="SVGRepo_iconCarrier">
+                      <title>add-square-solid</title>
+                      <g id="Layer_2" data-name="Layer 2">
+                        <g id="invisible_box" data-name="invisible box">
+                          <rect width="48" height="48" fill="none"></rect>
+                        </g>
+                        <g id="icons_Q2" data-name="icons Q2">
+                          <path
+                            d="M42,4H6A2,2,0,0,0,4,6V42a2,2,0,0,0,2,2H42a2,2,0,0,0,2-2V6A2,2,0,0,0,42,4ZM34,26H26v8a2,2,0,0,1-4,0V26H14a2,2,0,0,1,0-4h8V14a2,2,0,0,1,4,0v8h8a2,2,0,0,1,0,4Z"
+                          ></path>
+                        </g>
+                      </g>
+                    </g>
+                  </svg>
+                  <span class="ps-1">Create Playlist</span>
+                </div>
+              </a>
+
+              <a href="#" style="text-decoration: none">
+                <div class="col-12 my-2" id="leftColumn">
+                  <img src="https://misc.scdn.co/liked-songs/liked-songs-300.png" alt="" width="25px" />
+                  <span class="ps-1">Your Favourite song</span>
+                </div>
+              </a>
+
+              <a href="#" style="text-decoration: none">
+                <div class="col-12 border-bottom border-solid border-secondary mb-3 pb-3" id="leftColumn">
+                  <img src="https://i.ibb.co/zXR340n/Schermata-2024-03-04-alle-12-33-49.png" alt="" width="25px" />
+                  <span class="ps-1">Podcast </span>
+                </div>
+              </a>
+            </div>
+
+            <!-- PLAYLIST TASTE END -->
+
+            <!-- UL START -->
+            <div class="col-12 d-flex flex-column">
+              <ul class="list-unstyled text-light" id="containerList">
+                <li class="mb-2">&#x1F625; Ciao Akira Toriyama &#x1F625;</li>
+                <li class="mb-2">&#x1F92A; C'è del codice nel mio codice &#x1F92A;</li>
+                <li class="mb-2">&#x1F47E; Che la Forza sia con te &#x1F47E;</li>
+                <li class="mb-2">&#x1F9D9; ThEy aRe TaKinG tHe hObBits to IsEnGard &#129501;&#127996;</li>
+                <li class="mb-2">&#x1F47E; 404 MARCO NOT FOUND &#x1F47E;</li>
+                <li class="mb-2">&#x1F480; HEISENBERG &#x1F480;</li>
+                <li class="mb-2">&#127875; I WAS THERE &#127875;</li>
+                <li class="mb-2">&#x1F4BB; Coding Vibes &#x1F4BB;</li>
+                <li class="mb-2">&#x1F5E1; Dont Trust a Rogue &#x1F5E1;</li>
+                <li class="mb-2">&#x1F5FB; Venerdì &#x1F5FB;</li>
+                <li class="mb-2">&#x1F4AF; Dama &#x1F4AF;</li>
+                <li class="mb-2">&#x1F4AF; Sere &#x1F4AF;</li>
+                <li class="mb-2">&#x1F4AF; Popo &#x1F4AF;</li>
+                <li class="mb-2">🏴‍☠️Lo One Piece esiste!☠️</li>
+                <li class="mb-2">&#x1F3B5; De Andre Concerto &#x1F3B5;</li>
+                <li class="mb-2">&#x1F3B6; Altre Playlist &#x1F3B6;</li>
+                <li class="mb-2">&#x1F3B6; Altre Playlist &#x1F3B6;</li>
+                <li class="mb-2">&#x1F3B6; Altre Playlist &#x1F3B6;</li>
+                <li class="mb-2">&#x1F3B6; Altre Playlist &#x1F3B6;</li>
+                <li class="mb-2">&#x1F3B6; Altre Playlist &#x1F3B6;</li>
+                <li class="mb-2">&#x1F3B6; Altre Playlist &#x1F3B6;</li>
+                <li class="mb-2">&#x1F3B6; Altre Playlist &#x1F3B6;</li>
+                <li class="mb-2">&#x1F3B6; Altre Playlist &#x1F3B6;</li>
+              </ul>
+            </div>
+          </div>
+          <!-- UL END -->
+
+          <!-- CENTRAL SECTION  -->
+
+          <div class="col-12 col-md-9 p-0" id="centralContainer">
+            <div class="col-12 position-sticky top-0 py-3 asideBgColor" style="z-index: 99">
+              <nav>
+                <div class="d-flex align-items-center justify-content-between">
+                  <div class="d-flex">
+                    <button
+                      type="button"
+                      id="offcanvasBtn"
+                      data-bs-toggle="offcanvas"
+                      data-bs-target="#offcanvasWithBothOptions"
+                      aria-controls="offcanvasWithBothOptions"
+                      class="d-none d-md-block"
+                    >
+                      Active friends
+                    </button>
+
+                    <!-- vuoto?? -->
+                    <svg
+                      id="leftColumn"
+                      width="40px"
+                      height="40px"
+                      viewBox="-6 -6 36.00 36.00"
+                      fill="#ffffff"
+                      xmlns="http://www.w3.org/2000/svg"
+                      stroke="#121212"
+                      stroke-width="0.696"
+                    >
+                      <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                      <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                      <g id="SVGRepo_iconCarrier">
+                        <path
+                          d="M12 2C6.49 2 2 6.49 2 12C2 17.51 6.49 22 12 22C17.51 22 22 17.51 22 12C22 6.49 17.51 2 12 2ZM13.79 15C14.08 15.29 14.08 15.77 13.79 16.06C13.64 16.21 13.45 16.28 13.26 16.28C13.07 16.28 12.88 16.21 12.73 16.06L9.2 12.53C8.91 12.24 8.91 11.76 9.2 11.47L12.73 7.94C13.02 7.65 13.5 7.65 13.79 7.94C14.08 8.23 14.08 8.71 13.79 9L10.79 12L13.79 15Z"
+                          fill="#121212"
+                        ></path>
+                      </g>
+                    </svg>
+                    <svg
+                      id="leftColumn"
+                      width="40px"
+                      height="40px"
+                      viewBox="-6 -6 36.00 36.00"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                      stroke="#121212"
+                      stroke-width="0.696"
+                      transform="matrix(-1, 0, 0, 1, 0, 0)"
+                    >
+                      <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                      <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                      <g id="SVGRepo_iconCarrier">
+                        <path
+                          d="M12 2C6.49 2 2 6.49 2 12C2 17.51 6.49 22 12 22C17.51 22 22 17.51 22 12C22 6.49 17.51 2 12 2ZM13.79 15C14.08 15.29 14.08 15.77 13.79 16.06C13.64 16.21 13.45 16.28 13.26 16.28C13.07 16.28 12.88 16.21 12.73 16.06L9.2 12.53C8.91 12.24 8.91 11.76 9.2 11.47L12.73 7.94C13.02 7.65 13.5 7.65 13.79 7.94C14.08 8.23 14.08 8.71 13.79 9L10.79 12L13.79 15Z"
+                          fill="#121212"
+                        ></path>
+                      </g>
+                    </svg>
+                  </div>
+
+                  <div class="d-flex align-items-center" id="rightnav">
+                    <!-- button? -->
+
+                    <div
+                      class="col-12 d-flex align-items-center overflow-hidden my-2 flex-nowrap d-lg-none d-sm-block d-md-block d-xs-block"
+                      id="leftColumn"
+                    >
+                      <form id="searchForm5">
+                        <button
+                          type="submit"
+                          style="background-color: transparent; border: none; padding: 0; padding-right: 5px"
+                        >
+                          <svg width="25px" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                              d="M10.533 1.27893C5.35215 1.27893 1.12598 5.41887 1.12598 10.5579C1.12598 15.697 5.35215 19.8369 10.533 19.8369C12.767 19.8369 14.8235 19.0671 16.4402 17.7794L20.7929 22.132C21.1834 22.5226 21.8166 22.5226 22.2071 22.132C22.5976 21.7415 22.5976 21.1083 22.2071 20.7178L17.8634 16.3741C19.1616 14.7849 19.94 12.7634 19.94 10.5579C19.94 5.41887 15.7138 1.27893 10.533 1.27893ZM3.12598 10.5579C3.12598 6.55226 6.42768 3.27893 10.533 3.27893C14.6383 3.27893 17.94 6.55226 17.94 10.5579C17.94 14.5636 14.6383 17.8369 10.533 17.8369C6.42768 17.8369 3.12598 14.5636 3.12598 10.5579Z"
+                              class="myIcon"
+                            ></path>
+                          </svg>
+                        </button>
+
+                        <input
+                          type="text"
+                          id="artistName5"
+                          name="artistName"
+                          placeholder="Search"
+                          required
+                          style="background-color: rgb(0, 0, 0); border: none; color: white; width: 60%"
+                        />
+                      </form>
+                    </div>
+                    <!-- button? -->
+                    <!-- drop-downm? -->
+                    <div class="dropdown d-none d-lg-block">
+                      <button
+                        class="btn btn-dark dropdown-toggle"
+                        type="button"
+                        id="dropdownMenuButton1"
+                        data-bs-toggle="dropdown"
+                        aria-expanded="false"
+                        style="border-radius: 25px"
+                      >
+                        <img
+                          src="https://i.pinimg.com/564x/08/35/96/083596835424340eda90439fd20e5ee9.jpg"
+                          style="width: 30px; height: 30px; border-radius: 50%"
+                        />
+                        Lidia Nautilus...
+                      </button>
+                      <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdownMenuButton1">
+                        <li><a class="dropdown-item" href="/Login/login.html">Log out</a></li>
+                      </ul>
+                    </div>
+                    <!-- drop-downm? -->
+                  </div>
+                </div>
+              </nav>
+            </div>
+            <!--  HEADER OF ALBUM PAGE -->
+
+            <div id="albumHeader" class="d-flex flex-column flex-md-row position-relative"></div>
+
+            <!-- START BODY OF ALBUM PAGE  -->
+
+            <div id="albumContent" class="myBgGradient">
+              <!-- START FIRST ROW -->
+
+              <div class="row ms-3 py-4 align-items-center">
+                <div class="d-md-none order-md-first order-last" style="flex: 0">
+                  <svg
+                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                    xmlns="http://www.w3.org/2000/svg"
+                    data-encore-id="icon"
+                    role="img"
+                    aria-hidden="true"
+                    viewBox="0 0 16 16"
+                    class="Svg-sc-ytk21e-0 dYnaPI"
+                    width="16"
+                    height="16"
+                  >
+                    <path
+                      d="M13.151.922a.75.75 0 1 0-1.06 1.06L13.109 3H11.16a3.75 3.75 0 0 0-2.873 1.34l-6.173 7.356A2.25 2.25 0 0 1 .39 12.5H0V14h.391a3.75 3.75 0 0 0 2.873-1.34l6.173-7.356a2.25 2.25 0 0 1 1.724-.804h1.947l-1.017 1.018a.75.75 0 0 0 1.06 1.06L15.98 3.75 13.15.922zM.391 3.5H0V2h.391c1.109 0 2.16.49 2.873 1.34L4.89 5.277l-.979 1.167-1.796-2.14A2.25 2.25 0 0 0 .39 3.5z"
+                      fill-opacity="0.7"
+                      fill="#FFFFFF"
+                    ></path>
+                    <path
+                      d="m7.5 10.723.98-1.167.957 1.14a2.25 2.25 0 0 0 1.724.804h1.947l-1.017-1.018a.75.75 0 1 1 1.06-1.06l2.829 2.828-2.829 2.828a.75.75 0 1 1-1.06-1.06L13.109 13H11.16a3.75 3.75 0 0 1-2.873-1.34l-.787-.938z"
+                      fill-opacity="0.7"
+                      fill="#FFFFFF"
+                    ></path>
+                  </svg>
+                </div>
+
+                <div class="col order-md-first order-last me-2" style="flex: 0">
+                  <svg
+                    id="hover-scale"
+                    viewBox="0 0 16 16"
+                    version="1.1"
+                    xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                    fill="#000000"
+                    width="45px"
+                  >
+                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                    <g id="SVGRepo_iconCarrier">
+                      <path
+                        fill="#1BD760"
+                        d="M8 0c-4.4 0-8 3.6-8 8s3.6 8 8 8 8-3.6 8-8-3.6-8-8-8zM6 12v-8l6 4-6 4z"
+                      ></path>
+                    </g>
+                  </svg>
+                </div>
+
+                <div class="col" style="flex: 0" id="leftColumn">
+                  <svg
+                    class="text-white-50"
+                    width="25px"
+                    xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                    viewBox="-9.43 -9.43 490.56 490.56"
+                    xml:space="preserve"
+                    stroke-width="8.490618000000001"
+                  >
+                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                    <g id="SVGRepo_iconCarrier">
+                      <g>
+                        <path
+                          d="M433.601,67.001c-24.7-24.7-57.4-38.2-92.3-38.2s-67.7,13.6-92.4,38.3l-12.9,12.9l-13.1-13.1 c-24.7-24.7-57.6-38.4-92.5-38.4c-34.8,0-67.6,13.6-92.2,38.2c-24.7,24.7-38.3,57.5-38.2,92.4c0,34.9,13.7,67.6,38.4,92.3 l187.8,187.8c2.6,2.6,6.1,4,9.5,4c3.4,0,6.9-1.3,9.5-3.9l188.2-187.5c24.7-24.7,38.3-57.5,38.3-92.4 C471.801,124.501,458.301,91.701,433.601,67.001z M414.401,232.701l-178.7,178l-178.3-178.3c-19.6-19.6-30.4-45.6-30.4-73.3 s10.7-53.7,30.3-73.2c19.5-19.5,45.5-30.3,73.1-30.3c27.7,0,53.8,10.8,73.4,30.4l22.6,22.6c5.3,5.3,13.8,5.3,19.1,0l22.4-22.4 c19.6-19.6,45.7-30.4,73.3-30.4c27.6,0,53.6,10.8,73.2,30.3c19.6,19.6,30.3,45.6,30.3,73.3 C444.801,187.101,434.001,213.101,414.401,232.701z"
+                        ></path>
+                      </g>
+                    </g>
+                  </svg>
+                </div>
+
+                <div class="col" style="flex: 0" id="leftColumn">
+                  <svg width="28px" viewBox="0 0 24.00 24.00" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                    <g
+                      id="SVGRepo_tracerCarrier"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke="#CCCCCC"
+                      stroke-width="0.096"
+                    ></g>
+                    <g id="SVGRepo_iconCarrier">
+                      <g id="Arrow / Arrow_Circle_Down">
+                        <path
+                          id="Vector"
+                          d="M9 13L12 16M12 16L15 13M12 16V8M21 12C21 7.02944 16.9706 3 12 3C7.02944 3 3 7.02944 3 12C3 16.9706 7.02944 21 12 21C16.9706 21 21 16.9706 21 12Z"
+                        ></path>
+                      </g>
+                    </g>
+                  </svg>
+                </div>
+
+                <div class="col" id="leftColumn">
+                  <a href="#" style="text-decoration: none">
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" width="25px">
+                      <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                      <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                      <g id="SVGRepo_iconCarrier">
+                        <path
+                          d="M4 9.5C5.38071 9.5 6.5 10.6193 6.5 12C6.5 13.3807 5.38071 14.5 4 14.5C2.61929 14.5 1.5 13.3807 1.5 12C1.5 10.6193 2.61929 9.5 4 9.5Z"
+                        ></path>
+                        <path
+                          d="M12 9.5C13.3807 9.5 14.5 10.6193 14.5 12C14.5 13.3807 13.3807 14.5 12 14.5C10.6193 14.5 9.5 13.3807 9.5 12C9.5 10.6193 10.6193 9.5 12 9.5Z"
+                        ></path>
+                        <path
+                          d="M22.5 12C22.5 10.6193 21.3807 9.5 20 9.5C18.6193 9.5 17.5 10.6193 17.5 12C17.5 13.3807 18.6193 14.5 20 14.5C21.3807 14.5 22.5 13.3807 22.5 12Z"
+                        ></path>
+                      </g>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+
+              <!-- START OF ALBUM SONGS-->
+              <div class="row d-flex px-4">
+                <div
+                  class="col-12 d-flex border-bottom border-solid border-secondary mb-3 pb-3 d-md-none d-sm-none d-lg-block"
+                >
+                  <div class="container">
+                    <div class="row d-flex justify-content-between text-white-50">
+                      <div class="col-1 text-center">#</div>
+                      <div class="col-6 text-start">
+                        <p>TITOLO</p>
+                      </div>
+                      <div class="col-2 text-center">Riproduzioni</div>
+                      <div class="col-3 text-end">
+                        <svg
+                          width="25px"
+                          height="25px"
+                          viewBox="0 0 24.00 24.00"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                          <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                          <g id="SVGRepo_iconCarrier">
+                            <path
+                              d="M12 7V12H15M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z"
+                              stroke="#ffffff"
+                              stroke-width="1.9200000000000004"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            ></path>
+                          </g>
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div id="containerSongsAlbum"></div>
+              </div>
+            </div>
+          </div>
+          <!-- top post end -->
+
+          <!-- CENTRAL SECTION END -->
+
+          <!-- ASIDE CONTENT -->
+          <div
+            class="offcanvas offcanvas-end bg-black"
+            data-bs-scroll="true"
+            tabindex="-1"
+            id="offcanvasWithBothOptions"
+            aria-labelledby="offcanvasWithBothOptionsLabel"
+          >
+            <div class="offcanvas-header">
+              <button
+                type="button"
+                class="btn-close btn-close-white"
+                data-bs-dismiss="offcanvas"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="offcanvas-body">
+              <div class="asideRight">
+                <h6 class="subtitles">Attività amici</h6>
+
+                <div class="row align-items-center mt-3">
+                  <div class="col-2">
+                    <img src="./assets/imgs/main/image-13.jpg" alt="" width="45px" style="border-radius: 50%" />
+                  </div>
+                  <div class="col-7">
+                    <div class="col-12 fw-bold">Charlie Hookham</div>
+                    <div class="col-12">In Camera • Yumi Zouma</div>
+                    <div class="col-12">EP III</div>
+                  </div>
+                  <div class="col-3 fw-bold align-self-start">12 min</div>
+                </div>
+
+                <div class="row align-items-center mt-3">
+                  <div class="col-2">
+                    <img src="./assets/imgs/main/image-12.jpg" alt="" width="45px" style="border-radius: 50%" />
+                  </div>
+                  <div class="col-7">
+                    <div class="col-12 fw-bold">lightdark02</div>
+                    <div class="col-12">Aimed to Kill • Jade LeMac</div>
+                    <div class="col-12">Aimed to Kill</div>
+                  </div>
+                  <div class="col-3 fw-bold align-self-start">39 min</div>
+                </div>
+
+                <div class="row align-items-center mt-3">
+                  <div class="col-2">
+                    <img src="./assets/imgs/main/image-16.jpg" alt="" width="45px" style="border-radius: 50%" />
+                  </div>
+                  <div class="col-7">
+                    <div class="col-12 fw-bold">Valeria Traverso</div>
+                    <div class="col-12">New Kings • Sleeping Wolf</div>
+                    <div class="col-12">EP III</div>
+                  </div>
+                  <div class="col-3 fw-bold align-self-start">40 min</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- ASIDE CONTENT -->
+        </div>
+      </div>
+    </main>
+    <!-- END_MAIN -->
+
+    <!-- BEGIN_FOOTER -->
+    <footer>
+      <footer class="position-absolute bottom-0" style="width: 100%">
+        <div class="music-player">
+          <div class="song-bar">
+            <div class="song-infos">
+              <div class="image-container">
+                <img alt="" id="imgalbum" class="d-none d-md-block" />
+              </div>
+              <div class="song-description">
+                <p class="title d-none d-md-block" id="titleaudio"></p>
+                <p class="artist d-none d-md-block" id="titleartist"></p>
+              </div>
+            </div>
+            <div class="icons d-none d-md-block">
+              <i class="far fa-heart"></i>
+              <i class="fas fa-compress"></i>
+            </div>
+          </div>
+
+          <div class="progress-controller">
+            <div class="control-buttons">
+              <i class="fas fa-random"></i>
+              <i class="fas fa-step-backward"></i>
+              <i class="play-pause fas fa-play" onclick="togglePlayPause(progress)"></i>
+              <i class="fas fa-step-forward"></i>
+              <i class="fas fa-undo-alt"></i>
+            </div>
+
+            <div class="progress-container">
+              <span id="current-time">0:00</span>
+              <div class="progress-bar">
+                <div class="progress" id="progress"></div>
+              </div>
+              <!-- da completare questo timer -->
+              <span id="duration">0:00</span>
+            </div>
+            <audio id="audio-player" preload="metadata">
+              <source src="" type="audio/mp3" id="sourceSong" />
+            </audio>
+          </div>
+          <div class="other-features d-none d-md-flex">
+            <i class="fas fa-list-ul"></i>
+            <i class="fas fa-desktop"></i>
+            <div class="volume-bar" id="volume-bar">
+              <i class="fas fa-volume-down"></i>
+              <div class="progress-bar" id="volume-bar">
+                <div class="progress" id="volume-progress"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </footer>
+
+    <!-- END_FOOTER -->
+
+    <!-- BEGIN_SCRIPT -->
+    <script src="token.js"></script>
+
+    <script>
+      const audioPlayer = document.getElementById("audio-player");
+      const progress = document.getElementById("progress");
+      const currentTime = document.getElementById("current-time");
+      const duration = document.getElementById("duration");
+      const playPauseButton = document.querySelector(".play-pause");
+      const volumeBar = document.getElementById("volume-bar");
+      const volumeProgress = document.getElementById("volume-progress");
+
+      audioPlayer.volume = 0.5;
+      volumeBar.addEventListener("click", adjustVolume);
+
+      const rewindButton = document.querySelector(".fas.fa-undo-alt");
+
+      rewindButton.addEventListener("click", () => {
+        audioPlayer.currentTime = 0;
+        progress.style.width = "0%";
+      });
+
+      function adjustVolume(event) {
+        const rect = volumeBar.getBoundingClientRect();
+        const x = event.clientX - rect.left;
+        const percent = x / rect.width;
+        const volumeLevel = percent;
+        audioPlayer.volume = volumeLevel;
+        volumeProgress.style.width = `${percent * 100}%`;
+      }
+
+      function togglePlayPause(progressBar) {
+        if (audioPlayer.paused) {
+          audioPlayer.play();
+          progress.style.width = "0%";
+        } else {
+          audioPlayer.pause();
+        }
+      }
+
+      // function clickBar(event) {
+      //   console.log("clicked bar");
+      //   const percent = (event.clientX / progress.clientWidth) * 100;
+      //   const clickBarTime = (percent / 100) * audioPlayer.duration;
+      //   audioPlayer.currentTime = clickBarTime;
+      // }
+
+      // progress.addEventListener("click", (event) => {
+      //   clickBar(event);
+      // });
+
+      const pbar = document.querySelector(".progress-bar");
+      pbar.addEventListener("click", (e) => {
+        let widthbar2 = (e.offsetX / e.target.clientWidth) * audioPlayer.duration;
+        audioPlayer.currentTime = widthbar2;
+      });
+
+      audioPlayer.addEventListener("timeupdate", () => {
+        const percent = (audioPlayer.currentTime / audioPlayer.duration) * 100;
+        progress.style.width = `${percent}%`;
+
+        currentTime.textContent = formatTime(audioPlayer.currentTime);
+      });
+
+      audioPlayer.addEventListener("loadedmetadata", () => {
+        duration.textContent = formatTime(audioPlayer.duration);
+      });
+
+      audioPlayer.addEventListener("ended", () => {
+        playPauseButton.classList.remove("fa-pause");
+        playPauseButton.classList.add("fa-play");
+        progress.style.width = "0%";
+      });
+
+      audioPlayer.addEventListener("play", () => {
+        playPauseButton.classList.remove("fa-play");
+        playPauseButton.classList.add("fa-pause");
+      });
+
+      audioPlayer.addEventListener("pause", () => {
+        playPauseButton.classList.remove("fa-pause");
+        playPauseButton.classList.add("fa-play");
+      });
+
+      function formatTime(time) {
+        const minutes = Math.floor(time / 60);
+        const seconds = Math.floor(time % 60);
+        return `${minutes}:${seconds < 10 ? "0" : ""}${seconds}`;
+      }
+    </script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="./assets/script/album.js"></script>
+
+    <!-- END_SCRIPT -->
+  </body>
+</html>
